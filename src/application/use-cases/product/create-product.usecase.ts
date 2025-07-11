@@ -3,6 +3,7 @@ import { ProductRepository } from "src/domain/repositories/product.repository";
 import { CreateProductInputDto } from "src/shared/dtos/product/create-product-input.dto";
 import { ProductOutputDto } from "src/shared/dtos/product/product-output.dto";
 
+// Example of use case file
 @Injectable()
 export class CreateProductUseCase {
     constructor(private readonly productRepository: ProductRepository) {}

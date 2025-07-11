@@ -1,3 +1,5 @@
+// Example of input dto
+
 export class CreateProductInputDto {
     name:               string;
     quantity:           number;

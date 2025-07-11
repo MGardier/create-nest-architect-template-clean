@@ -3,6 +3,8 @@ import { CreateProductUseCase } from "src/application/use-cases/product/create-p
 import { CreateProductInputDto } from "src/shared/dtos/product/create-product-input.dto";
 import { ProductOutputDto } from "src/shared/dtos/product/product-output.dto";
 
+// Example of controller file
+
 @Controller('product')
 export class ProductController {
     constructor(private readonly createProductUC: CreateProductUseCase) {}

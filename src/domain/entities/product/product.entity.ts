@@ -1,3 +1,5 @@
+// Example of entity file
+
 export interface Product {
     id: number;
     name: string;

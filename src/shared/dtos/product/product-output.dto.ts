@@ -1,3 +1,6 @@
+// Example of output dto
+
+
 export class ProductOutputDto {
 
     constructor(id: number, name: string, quantity: number, price: number) {

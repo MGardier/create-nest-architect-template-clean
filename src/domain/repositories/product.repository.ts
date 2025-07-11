@@ -2,6 +2,8 @@ import { CreateProductInputDto } from "src/shared/dtos/product/create-product-in
 import { Product } from "../entities/product/product.entity";
 import { Injectable } from "@nestjs/common";
 
+// Example of domain repository file
+
 @Injectable()
 export abstract class ProductRepository {
 
