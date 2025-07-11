@@ -7,6 +7,7 @@ import { ProductRepository } from './domain/repositories/product.repository';
 import { CreateProductUseCase } from './application/use-cases/product/create-product.usecase';
 
 // Infrastructure (Concrete implementation - adapters, ormModules, etc.) 
+import { ProductOrmAdapter } from './infrastructure/repositories/orm/product/product-orm.adapter';
 
 // Controllers
 import { AppController } from './app.controller';
@@ -14,10 +15,6 @@ import { AppController } from './app.controller';
 // Services
 import { AppService } from './app.service';
 import { StripeService } from './infrastructure/services/stripe-payment.service';
-
-
-
-
 
 
 @Module({
@@ -39,10 +36,10 @@ import { StripeService } from './infrastructure/services/stripe-payment.service'
     
 
     // Bind domain abstractions to infrastructure implementations
-    // {
-    //   provide: ProductRepository,
-    //   useClass: ProductPrismaAdapter,
-    // },
+    {
+      provide: ProductRepository,
+      useClass: ProductOrmAdapter,
+    },
   ],
 })
 export class AppModule {}
