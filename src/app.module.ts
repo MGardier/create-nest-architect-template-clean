@@ -10,10 +10,10 @@ import { CreateProductUseCase } from './application/use-cases/product/create-pro
 import { ProductOrmAdapter } from './infrastructure/repositories/orm/product/product-orm.adapter';
 
 // Controllers
-import { AppController } from './app.controller';
+
 
 // Services
-import { AppService } from './app.service';
+
 import { StripeService } from './infrastructure/services/stripe-payment.service';
 
 
@@ -23,7 +23,6 @@ import { StripeService } from './infrastructure/services/stripe-payment.service'
   ],
   controllers: [
     // Controllers (entry points – e.g., HTTP)
-    AppController
   ],
   providers: [
     // Use cases (Application layer)
@@ -31,7 +30,6 @@ import { StripeService } from './infrastructure/services/stripe-payment.service'
 
 
     // Concrete implementations (Infrastructure layer)
-    AppService,
     StripeService,
     
 
